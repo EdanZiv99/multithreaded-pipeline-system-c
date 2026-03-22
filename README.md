@@ -70,7 +70,3 @@ The test suite includes:
 - POSIX Threads (pthread)
 - Dynamic linking (dlopen, dlsym)
 - Bash
-
-## Author
-
-Edan Ziv
