@@ -31,38 +31,46 @@ The system demonstrates core operating systems concepts including:
 
 ## Build
 
-```bash
-./build.sh
-Run
-./output/analyzer <queue_size> <plugin1> <plugin2> ...
-Example
-echo "hello" | ./output/analyzer 20 uppercaser rotator logger
+    ./build.sh
 
-Output:
+## Run
 
-[logger] OHELL
-Testing
+    ./output/analyzer <queue_size> <plugin1> <plugin2> ...
+
+## Example
+
+    echo "hello" | ./output/analyzer 20 uppercaser rotator logger
+
+## Output
+
+    [logger] OHELL
+
+## Testing
 
 Run the full test suite:
 
-./test.sh
+    ./test.sh
 
-Includes:
+The test suite includes:
+- Positive and negative test cases
+- Stress tests
+- Edge cases
+- Queue overflow scenarios
 
-Positive and negative test cases
-Stress tests
-Edge cases
-Queue overflow scenarios
-Key Implementation Details
-Custom monitor implementation to avoid lost wakeups
-Circular buffer-based producer-consumer queue
-Graceful shutdown using <END> signal propagation
-Thread-safe plugin chaining via function pointers
-Technologies
-C
-POSIX Threads (pthread)
-Dynamic linking (dlopen, dlsym)
-Bash scripting
-Author
+## Key Implementation Details
+
+- Custom monitor implementation to avoid lost wakeups
+- Circular buffer-based producer-consumer queue
+- Graceful shutdown using <END> signal propagation
+- Thread-safe plugin chaining via function pointers
+
+## Technologies
+
+- C
+- POSIX Threads (pthread)
+- Dynamic linking (dlopen, dlsym)
+- Bash
+
+## Author
 
 Edan Ziv
